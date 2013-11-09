@@ -36,25 +36,4 @@ public class PlayBlackJack
 			System.out.println();
 			}
 		}
-	
-//	public static boolean checkForBust()
-//		{
-//		if (playerHandValue > 21)
-//			{
-//			System.out.println("You're busted!");
-//			System.exit(0);
-//			}
-//		if (dealerHandValue > 21)
-//			{
-//			System.out.println("You win. The dealer is busted!");
-//			System.exit(0);
-//			}
-//		else
-//			{
-//			return true;
-//			}
-//		return false;
-//		}
-
-
 	}
