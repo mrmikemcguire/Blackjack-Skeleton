@@ -34,48 +34,105 @@ public static void deal()
 		{
 		currentCard = deck.get(0);
 		
-	if ((currentCard.substring(0,3).equals ("kin")) || (currentCard.substring(0,3).equals ("que")) || 
-		(currentCard.substring(0,3).equals ("jac")) || (currentCard.substring(0,3).equals ("ten")))
-		{
-		currentCardValue = 10;
-		}
-	if ((currentCard.substring(0,3).equals ("nin")))
-		{
-		currentCardValue = 9;
-		}
-	if ((currentCard.substring(0,3).equals ("eig")))
-		{
-		currentCardValue = 8;
-		}
-	if ((currentCard.substring(0,3).equals ("sev")))
-		{
-		currentCardValue = 7;
-		}
-	if ((currentCard.substring(0,3).equals ("six")))
-		{
-		currentCardValue = 6;
-		}
-	if ((currentCard.substring(0,3).equals ("fiv")))
-		{
-		currentCardValue = 5;
-		}
-	if ((currentCard.substring(0,3).equals ("fou")))
-		{
-		currentCardValue = 4;
-		}
-	if ((currentCard.substring(0,3).equals ("thr")))
-		{
-		currentCardValue = 3;
-		}
-	if ((currentCard.substring(0,3).equals ("two")))
-		{
-		currentCardValue = 2;
-		}
-	if ((currentCard.substring(0,3).equals ("ace")))
-		{
-		currentCardValue = 11;
-		}
-	
+		switch (currentCard.substring(0,3))
+			{
+			case "ace":
+				{
+				currentCardValue = 11;
+				break;
+				}
+			case "kin":
+			case "que":
+			case "jac":
+			case "ten":
+				{
+				currentCardValue = 10;
+				break;
+				}
+			case "nin":
+				{
+				currentCardValue = 9;
+				break;
+				}
+			case "eig":
+				{
+				currentCardValue = 8;
+				break;
+				}
+			case "sev":
+				{
+				currentCardValue = 7;
+				break;
+				}
+			case "six":
+				{
+				currentCardValue = 6;
+				break;
+				}
+			case "fiv":
+				{
+				currentCardValue = 5;
+				break;
+				}
+			case "fou":
+				{
+				currentCardValue = 4;
+				break;
+				}
+			case "thr":
+				{
+				currentCardValue = 3;
+				break;
+				}
+			case "two":
+				{
+				currentCardValue = 2;
+				break;
+				}		
+			}
+		
+//	if ((currentCard.substring(0,3).equals ("kin")) || (currentCard.substring(0,3).equals ("que")) || 
+//		(currentCard.substring(0,3).equals ("jac")) || (currentCard.substring(0,3).equals ("ten")))
+//		{
+//		currentCardValue = 10;
+//		}
+//	if ((currentCard.substring(0,3).equals ("nin")))
+//		{
+//		currentCardValue = 9;
+//		}
+//	if ((currentCard.substring(0,3).equals ("eig")))
+//		{
+//		currentCardValue = 8;
+//		}
+//	if ((currentCard.substring(0,3).equals ("sev")))
+//		{
+//		currentCardValue = 7;
+//		}
+//	if ((currentCard.substring(0,3).equals ("six")))
+//		{
+//		currentCardValue = 6;
+//		}
+//	if ((currentCard.substring(0,3).equals ("fiv")))
+//		{
+//		currentCardValue = 5;
+//		}
+//	if ((currentCard.substring(0,3).equals ("fou")))
+//		{
+//		currentCardValue = 4;
+//		}
+//	if ((currentCard.substring(0,3).equals ("thr")))
+//		{
+//		currentCardValue = 3;
+//		}
+//	if ((currentCard.substring(0,3).equals ("two")))
+//		{
+//		currentCardValue = 2;
+//		}
+//	if ((currentCard.substring(0,3).equals ("ace")))
+//		{
+//		currentCardValue = 11;
+//		}
+//	
 	deck.remove(0);
 	}
 }
