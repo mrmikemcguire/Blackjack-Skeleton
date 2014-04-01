@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-
 public class Deck
 	{
 	static String currentCard;
@@ -19,9 +18,9 @@ public class Deck
 	
 	public static void populateDeck()
 		{
-		for(int i=0;i<52;i++)
+		for(String cards : listOfCards)
 			{
-			deck.add(listOfCards[i]);
+			deck.add(cards);
 			}
 		}
 	
