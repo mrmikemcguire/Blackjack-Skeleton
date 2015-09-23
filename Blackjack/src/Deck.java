@@ -3,135 +3,66 @@ import java.util.Collections;
 
 public class Deck
 	{
-	static String currentCard;
-	static int currentCardValue;
-	static ArrayList<String> deck = new ArrayList<String>();
-
-	static String[] listOfCards = {"ace of diamonds", "king of diamonds", "queen of diamonds", "jack of diamonds", "ten of diamonds", "nine of diamonds", "eight of diamonds", "seven of diamonds",
-			"six of diamonds", "five of diamonds", "four of diamonds", "three of diamonds", "two of diamonds", "ace of spades",
-			"king of spades", "queen of spades", "jack of spades", "ten of spades", "nine of spades", "eight of spades", "seven of spades", "six of spades",
-			"five of spades", "four of spades", "three of spades", "two of spades", "ace of clubs", "king of clubs",
-			"queen of clubs", "jack of clubs", "ten of clubs", "nine of clubs", "eight of clubs", "seven of clubs",
-			"six of clubs", "five of clubs", "four of clubs", "three of clubs", "two of clubs", "ace of hearts",
-			"king of hearts", "queen of hearts", "jack of hearts", "ten of hearts", "nine of hearts", "eight of hearts", "seven of hearts", "six of hearts",
-			"five of hearts", "four of hearts", "three of hearts", "two of hearts"};
+	static ArrayList<Card> deck = new ArrayList<Card>();
 	
-	public static void populateDeck()
+	public static void fillDeck()
 		{
-		for(String cards : listOfCards)
-			{
-			deck.add(cards);
-			}
+		deck.add(new Card("ace", "hearts", 11));
+		deck.add(new Card("ace", "clubs", 11));
+		deck.add(new Card("ace", "spades", 11));
+		deck.add(new Card("ace", "diamonds", 11));
+		deck.add(new Card("king", "hearts", 10));
+		deck.add(new Card("king", "clubs", 10));
+		deck.add(new Card("king", "spades", 10));
+		deck.add(new Card("king", "diamonds", 10));
+		deck.add(new Card("queen", "hearts", 10));
+		deck.add(new Card("queen", "clubs", 10));
+		deck.add(new Card("queen", "spades", 10));
+		deck.add(new Card("queen", "diamonds", 10));
+		deck.add(new Card("jack", "hearts", 10));
+		deck.add(new Card("jack", "clubs", 10));
+		deck.add(new Card("jack", "spades", 10));
+		deck.add(new Card("jack", "diamonds", 10));
+		deck.add(new Card("ten", "hearts", 10));
+		deck.add(new Card("ten", "clubs", 10));
+		deck.add(new Card("ten", "spades", 10));
+		deck.add(new Card("ten", "diamonds", 10));
+		deck.add(new Card("nine", "hearts", 9));
+		deck.add(new Card("nine", "clubs", 9));
+		deck.add(new Card("nine", "spades", 9));
+		deck.add(new Card("nine", "diamonds", 9));
+		deck.add(new Card("eight", "hearts", 8));
+		deck.add(new Card("eight", "clubs", 8));
+		deck.add(new Card("eight", "spades", 8));
+		deck.add(new Card("eight", "diamonds", 8));
+		deck.add(new Card("seven", "hearts", 7));
+		deck.add(new Card("seven", "clubs", 7));
+		deck.add(new Card("seven", "spades", 7));
+		deck.add(new Card("seven", "diamonds", 7));
+		deck.add(new Card("six", "hearts", 6));
+		deck.add(new Card("six", "clubs", 6));
+		deck.add(new Card("six", "spades", 6));
+		deck.add(new Card("six", "diamonds", 6));
+		deck.add(new Card("five", "hearts", 5));
+		deck.add(new Card("five", "clubs", 5));
+		deck.add(new Card("five", "spades", 5));
+		deck.add(new Card("five", "diamonds", 5));
+		deck.add(new Card("four", "hearts", 4));
+		deck.add(new Card("four", "clubs", 4));
+		deck.add(new Card("four", "spades", 4));
+		deck.add(new Card("four", "diamonds", 4));
+		deck.add(new Card("three", "hearts", 3));
+		deck.add(new Card("three", "clubs", 3));
+		deck.add(new Card("three", "spades", 3));
+		deck.add(new Card("three", "diamonds", 3));
+		deck.add(new Card("two", "hearts", 2));
+		deck.add(new Card("two", "clubs", 2));
+		deck.add(new Card("two", "spades", 2));
+		deck.add(new Card("two", "diamonds", 2));
 		}
 	
 	public static void shuffle()
 		{
-		Collections.shuffle(deck);	
+		Collections.shuffle(deck);
 		}
-	
-public static void deal()
-		{
-		currentCard = deck.get(0);
-		
-		switch (currentCard.substring(0,3))
-			{
-			case "ace":
-				{
-				currentCardValue = 11;
-				break;
-				}
-			case "kin":
-			case "que":
-			case "jac":
-			case "ten":
-				{
-				currentCardValue = 10;
-				break;
-				}
-			case "nin":
-				{
-				currentCardValue = 9;
-				break;
-				}
-			case "eig":
-				{
-				currentCardValue = 8;
-				break;
-				}
-			case "sev":
-				{
-				currentCardValue = 7;
-				break;
-				}
-			case "six":
-				{
-				currentCardValue = 6;
-				break;
-				}
-			case "fiv":
-				{
-				currentCardValue = 5;
-				break;
-				}
-			case "fou":
-				{
-				currentCardValue = 4;
-				break;
-				}
-			case "thr":
-				{
-				currentCardValue = 3;
-				break;
-				}
-			case "two":
-				{
-				currentCardValue = 2;
-				break;
-				}		
-			}
-		
-//	if ((currentCard.substring(0,3).equals ("kin")) || (currentCard.substring(0,3).equals ("que")) || 
-//		(currentCard.substring(0,3).equals ("jac")) || (currentCard.substring(0,3).equals ("ten")))
-//		{
-//		currentCardValue = 10;
-//		}
-//	if ((currentCard.substring(0,3).equals ("nin")))
-//		{
-//		currentCardValue = 9;
-//		}
-//	if ((currentCard.substring(0,3).equals ("eig")))
-//		{
-//		currentCardValue = 8;
-//		}
-//	if ((currentCard.substring(0,3).equals ("sev")))
-//		{
-//		currentCardValue = 7;
-//		}
-//	if ((currentCard.substring(0,3).equals ("six")))
-//		{
-//		currentCardValue = 6;
-//		}
-//	if ((currentCard.substring(0,3).equals ("fiv")))
-//		{
-//		currentCardValue = 5;
-//		}
-//	if ((currentCard.substring(0,3).equals ("fou")))
-//		{
-//		currentCardValue = 4;
-//		}
-//	if ((currentCard.substring(0,3).equals ("thr")))
-//		{
-//		currentCardValue = 3;
-//		}
-//	if ((currentCard.substring(0,3).equals ("two")))
-//		{
-//		currentCardValue = 2;
-//		}
-//	if ((currentCard.substring(0,3).equals ("ace")))
-//		{
-//		currentCardValue = 11;
-//		}
-//	
-	deck.remove(0);
 	}
-}
